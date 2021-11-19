@@ -1,4 +1,4 @@
-# Rebuy (example of documentation for Rebuy)
+# Rebuy
 
 Rebuy integration for Shogun Frontend.
 
