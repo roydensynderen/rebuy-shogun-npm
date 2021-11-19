@@ -14,21 +14,16 @@ const Test: React.FC<Props> = ({ shopifyDomain }) => {
 
 describe('useRebuyWidget', () => {
   it('renders script', () => {
-    const appKey = faker.datatype.uuid()
-
-    render(<Test appKey={appKey} />)
+    render(<Test />)
 
     expect(document.querySelector(`script[data-script="rebuy"]`)).toBeDefined()
   })
 
   it('renders only one script and uses latest app key', () => {
-    const appKey = faker.datatype.uuid()
-    const appKey2 = faker.datatype.uuid()
-
     render(
       <>
-        <Test appKey={appKey} />
-        <Test appKey={appKey2} />
+        <Test />
+        <Test />
       </>
     )
 
