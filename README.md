@@ -45,7 +45,7 @@ Rebuy integration for Shogun Frontend.
     return (
       <div
         data-rebuy-id="widgetId"
-        data-rebuy-shopify-product-ids="<Product ID>">
+        data-rebuy-shopify-product-ids="<Product ID>"
       </div>
     )
   }
