@@ -13,7 +13,7 @@ Rebuy integration for Shogun Frontend.
   </tbody>
 </table>
 
-[Rebuy website →](https://www.rebuyengine.com)
+[Rebuy website →](https://rebuyengine.com)
 
 ### Installation
 
