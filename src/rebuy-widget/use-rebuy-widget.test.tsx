@@ -12,15 +12,16 @@ const Test: React.FC<Props> = ({ shopifyDomain }) => {
 }
 
 describe('useRebuyWidget', () => {
-  it('renders script', () => {
+  it('renders Rebuy script', () => {
     render(<Test />)
 
     expect(document.querySelector(`script[data-script="rebuy"]`)).toBeDefined()
   })
 
-  it('renders only one script and uses latest app key', () => {
+  it('renders only one script with multiple widgets', () => {
     render(
       <>
+        <Test />
         <Test />
         <Test />
       </>

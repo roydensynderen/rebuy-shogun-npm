@@ -7,17 +7,37 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@testing-library/react": "^12.1.2",
     "@types/react": "^17.0.36",
+    "@storybook/react": "^6.3.12",
+    "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.3",
+    "jest": "^27.3.1",
+    "react-test-renderer": "^17.0.2",
     "typescript": "^4.5.2"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "dependencies": {
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
