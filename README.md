@@ -18,7 +18,6 @@ Rebuy integration for Shogun Frontend.
 ### Installation
 
 `yarn add @frontend-sdk/rebuy`
-
 `npm install @frontend-sdk/rebuy`
 
 ---
@@ -51,13 +50,16 @@ Rebuy integration for Shogun Frontend.
   }
   ```
 
-## Rebuy data
+## Rebuy Data
 
-1. Add `div` with the widget's data source ID and API key:
+1. Add `div` with the widget's data source API endpoint (You can find it here: https://rebuyengine.com/data_sources/id/<Data Source Id>/preview):
 
   ```jsx
-  const RebuyWidget = ({ dataSourceId, apiKey }) => {
-    const rebuyData = useRebuyData('<insert data source ID>', '<insert API key>')
+  import { useRebuyData } from '@frontend-sdk/rebuy'
+
+  const RebuyWidget = ({ dataSourceUrl }) => {
+    const rebuyData = useRebuyData('<insert data source URL>')
+
     return (
       <div>
         { 
