@@ -1,1 +1,1 @@
-export declare function useRebuyData(dataSourceId: any, apiKey: any): {};
+export declare function useRebuyData(dataSourceUrl: any): {};
