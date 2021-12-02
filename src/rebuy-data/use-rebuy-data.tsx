@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 
-export function useRebuyData(dataSourceId, apiKey) {
+export function useRebuyData(dataSourceUrl) {
   const [rebuyData, setRebuyData] = useState({})
-  const dataSourceUrl = `https://cdn.rebuyengine.com/api/v1/custom/id/${dataSourceId}?key=${apiKey}`
 
   useEffect(() => {
     fetch(dataSourceUrl)
