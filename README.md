@@ -31,16 +31,8 @@ Rebuy integration for Shogun Frontend.
   ```jsx
   import { useRebuyWidget } from '@frontend-sdk/rebuy'
 
-  const App = () => {
-    useRebuyWidget('<insert Shopify domain here>')
-    return <>…</>
-  }
-  ```
-
-2. Add `div` with the widget ID:
-
-  ```jsx
   const RebuyWidget = ({ widgetId }) => {
+    useRebuyWidget('<insert Shopify domain>')
     return (
       <div
         data-rebuy-id="widgetId"
@@ -50,6 +42,8 @@ Rebuy integration for Shogun Frontend.
   }
   ```
 
+Props: widgetId, shopifyDomain
+
 ## Rebuy Data
 
 1. Add `div` with the widget's data source API endpoint (You can find it here: https://rebuyengine.com/data_sources/id/<Data Source Id>/preview):
@@ -58,7 +52,7 @@ Rebuy integration for Shogun Frontend.
   import { useRebuyData } from '@frontend-sdk/rebuy'
 
   const RebuyWidget = ({ dataSourceUrl }) => {
-    const rebuyData = useRebuyData('<insert data source URL>')
+    const rebuyData = useRebuyData(dataSourceUrl)
 
     return (
       <div>
@@ -82,6 +76,8 @@ Rebuy integration for Shogun Frontend.
     )
   }
   ```
+
+Props: dataSourceUrl
 
 ---
 
